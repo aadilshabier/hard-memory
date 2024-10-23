@@ -1,9 +1,4 @@
-#include <stdio.h>
 #include <stdlib.h>
-
-void use(int *p) {
-	printf("Number: %d\n", *p);
-};
 
 int main() {
 	int *p1;
@@ -15,6 +10,6 @@ int main() {
 		free(p2);
 	}
 
-	// p1 points to an invalid object
-	use(p1);
+	// double free occurs here
+	free(p1);
 }
