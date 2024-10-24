@@ -9,7 +9,7 @@ def main():
     b = None
     print("Reference Count:", sys.getrefcount(a))
 
-    # print(gc.get_referrers(a))
+    print(gc.get_referrers(a))
 
 if __name__ == "__main__":
     main()
